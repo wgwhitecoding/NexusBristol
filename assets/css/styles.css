@@ -17,7 +17,7 @@ body {
 .background-container {
     position: relative;
     flex: 1;
-    background: url(/assets/images/NexusClubImage.jpg);
+    background: url(../images/NexusClubImage.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
