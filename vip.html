@@ -24,28 +24,27 @@
         <main class="content text-center">
             <section class="contact-section">
                 <h2 class="section-title">VIP Table Booking</h2>
-                
                 <div class="contact-method">
                     <form id="vipBookingForm" class="contact-form">
                         <div class="mb-3">
                             <label for="vipName" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="vipName" required>
+                            <input type="text" class="form-control" id="vipName" autocomplete="name" required>
                         </div>
                         <div class="mb-3">
                             <label for="vipEmail" class="form-label">Your Email</label>
-                            <input type="email" class="form-control" id="vipEmail" required>
+                            <input type="email" class="form-control" id="vipEmail" autocomplete="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="vipPhone" class="form-label">Your Phone</label>
-                            <input type="tel" class="form-control" id="vipPhone" required>
+                            <input type="tel" class="form-control" id="vipPhone" autocomplete="tel" required>
                         </div>
                         <div class="mb-3">
                             <label for="vipDate" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="vipDate" required>
+                            <input type="date" class="form-control" id="vipDate" autocomplete="bday" required>
                         </div>
                         <div class="mb-3">
                             <label for="vipTime" class="form-label">Time</label>
-                            <input type="time" class="form-control" id="vipTime" required>
+                            <input type="time" class="form-control" id="vipTime" autocomplete="off" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Book VIP Table</button>
                     </form>
@@ -59,3 +58,6 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+
+

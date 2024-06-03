@@ -64,7 +64,7 @@ body {
     height: 50px; 
     display: block;
     margin: 0 auto;
-    margin-top: 50px; 
+    margin-top: 100px; 
     z-index: 5;
 }
 
@@ -88,27 +88,29 @@ body {
     position: relative; 
 }
 
-.contact-section .section-title {
+.section-title {
     font-size: 2em;
     margin-bottom: 20px;
     color: white;
 }
 
-.contact-method {
-    margin-bottom: 40px;
-}
-
 .contact-form {
     max-width: 800px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     z-index: 5;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-form .form-control {
+    width: 45rem; 
     background-color: transparent;
     color: white;
     border: 1px solid white;
@@ -130,3 +132,19 @@ body {
     background-color: #ff5050;
     border-color: #ff5050;
 }
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .contact-form .form-control {
+        width: 100%; 
+    }
+}
+
