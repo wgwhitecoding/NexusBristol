@@ -17,6 +17,10 @@ body {
 .background-container {
     position: relative;
     flex: 1;
+    background: url(/assets/images/NexusClubImage.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 .overlay {
@@ -36,31 +40,30 @@ body {
     width: 100%;
     z-index: 4; 
     background-color: transparent;
-    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .header .logo1 {
-    display: inline-block;
+    margin-left: 0;
+    z-index: 5; 
 }
 
 .logo1 img {
-    width: 25px;
+    width: 25px; 
     height: auto;
     display: block;
-    padding: 15px;
-    margin-bottom: 30px;
-    margin-left: 20px;
-}
-
-.logo2 {
-    margin-top: 100px; 
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .logo2 img {
-    width: 400px;
-    height: 50px;
+    width: 300px; 
+    height: 50px; 
     display: block;
     margin: 0 auto;
+    margin-top: 100px; 
 }
 
 .custom-navbar {
@@ -82,12 +85,14 @@ body {
 }
 
 .custom-navbar-left {
-    border-right: 5px solid white;
+    border-right: 3px solid white;
     padding-right: 40px;
+    align-items: flex-end; 
 }
 
 .custom-navbar-right {
-    padding-left: 40px;
+    padding-left: 40pxpx;
+    align-items: flex-start;
 }
 
 .custom-navbar a {
@@ -112,7 +117,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: right;
     margin-top: 150px;
     margin-bottom: 150px;
 }
@@ -236,3 +241,9 @@ body {
 .social-media i {
     margin-right: 5px;
 }
+
+
+
+
+
+
