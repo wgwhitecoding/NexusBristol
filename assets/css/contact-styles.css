@@ -44,7 +44,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    justify-content: space-between; /* Ensure space between logo and burger menu */
+    justify-content: space-between; 
 }
 
 .header .logo1 {
@@ -85,21 +85,21 @@ body {
 
 .nav-overlay-content {
     position: relative;
-    top: 20%; /* Adjusted to push content up */
+    top: 15%; 
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    
 }
 
 .nav-overlay-content .close-btn {
-    position: fixed; /* Changed from absolute to fixed */
-    top: 10px; /* Positioned at the top */
-    right: 20px; /* Positioned at the right */
+    position: fixed; 
+    top: 10px; 
+    right: 20px; 
     font-size: 3em;
     cursor: pointer;
     color: white;
-    z-index: 11; /* Ensure it's above other elements */
-    visibility: hidden; /* Hide close button initially */
+    z-index: 11; 
+    visibility: hidden;
 }
 
 .nav-overlay .custom-navbar {
@@ -124,7 +124,7 @@ body {
 }
 
 .nav-overlay .custom-navbar-right {
-    padding-left: 40px; /* Adjusted padding to move closer to the line */
+    padding-left: 40px; 
     align-items: flex-start;
 }
 
@@ -246,7 +246,9 @@ body {
     background-color: #ff5050;
     border-color: #ff5050;
 }
-
+.highlighted-link {
+    color: #ff0000 !important;
+}
 /* Media Query for Smaller Devices */
 @media (max-width: 768px) {
     .contact-methods {
@@ -270,15 +272,15 @@ body {
     }
 
     .nav-overlay-content {
-        top: 15%; /* Adjusted to ensure proper alignment */
+        top: 15%; 
     }
 
     .nav-overlay .custom-navbar {
         flex-direction: row;
-        justify-content: space-between; /* Keep items spread out evenly */
+        justify-content: center; 
         align-items: center;
-        width: 90%; /* Reduce width to center-align */
-        margin: 0 auto; /* Center the navbar */
+        width: 90%; 
+        margin: 0 auto; 
     }
 
     .nav-overlay .custom-navbar-left,
@@ -291,13 +293,14 @@ body {
     .nav-overlay .custom-navbar-left {
         border-right: 3px solid white;
         padding-right: 20px;
-        align-items: flex-end; /* Ensure text alignment to the right */
-        margin-right: auto; /* Push the line to the left */
+        align-items: flex-end; 
+        margin-right: 0; 
     }
 
     .nav-overlay .custom-navbar-right {
-        padding-left: 10px; /* Move closer to the line */
-        align-items: flex-start; /* Ensure text alignment to the left */
+        padding-left: 0; 
+        align-items: flex-start; 
+        margin-left: 20px; 
     }
 
     .nav-overlay .custom-navbar a {
@@ -310,6 +313,8 @@ body {
         margin: 10px 0;
     }
 }
+
+
 
 
 

@@ -20,42 +20,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Email Form Submission
-    const emailForm = document.getElementById('emailForm');
-    if (emailForm) {
-        emailForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            alert('Email sent to ' + email + ' with message: ' + message);
-            // Here you would typically send the data to a server
-        });
-    }
-
-    // VIP Booking Form Submission
-    const vipBookingForm = document.getElementById('vipBookingForm');
-    if (vipBookingForm) {
-        vipBookingForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('vipName').value;
-            const email = document.getElementById('vipEmail').value;
-            const phone = document.getElementById('vipPhone').value;
-            const date = document.getElementById('vipDate').value;
-            const time = document.getElementById('vipTime').value;
-            alert('VIP Table booked for ' + name + ' on ' + date + ' at ' + time);
-            // Here you would typically send the data to a server
+    // Function to highlight the current page link
+    function highlightCurrentPageLink() {
+        const currentPath = window.location.pathname.split("/").pop();
+        const links = document.querySelectorAll('.custom-navbar a');
+        links.forEach(link => {
+            const linkPath = link.getAttribute('href').split("/").pop();
+            if (linkPath === currentPath) {
+                link.classList.add('highlighted-link'); // Add the class to highlight the link
+            } else {
+                link.classList.remove('highlighted-link'); // Remove the class if it's not the current page
+            }
         });
     }
 
     // Burger Menu and Overlay
     const burgerMenu = document.querySelector('.burger-menu');
-    const navOverlay = document.getElementById('nav-overlay');
+    const navOverlay = document.getElementById('navOverlay') || document.getElementById('nav-overlay');
     const closeBtn = document.querySelector('.nav-overlay .close-btn');
 
     if (burgerMenu && navOverlay && closeBtn) {
         burgerMenu.addEventListener('click', function() {
             navOverlay.style.height = '100%';
             closeBtn.style.visibility = 'visible'; // Make close button visible when overlay is shown
+            highlightCurrentPageLink(); // Highlight the current page link when the overlay is shown
         });
 
         closeBtn.addEventListener('click', function() {
@@ -80,6 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+
+
 
 
 

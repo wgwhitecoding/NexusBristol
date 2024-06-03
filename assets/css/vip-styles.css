@@ -44,6 +44,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    justify-content: space-between; 
 }
 
 .header .logo1 {
@@ -57,6 +58,90 @@ body {
     display: block;
     margin-left: 10px;
     margin-top: 10px;
+}
+
+.burger-menu {
+    display: block;
+    z-index: 10;
+    cursor: pointer;
+    color: white;
+    font-size: 2em;
+}
+
+.nav-overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.highlighted-link {
+    color: #ff0000 !important;
+}
+
+.nav-overlay-content {
+    position: relative;
+    top: 15%; 
+    width: 100%;
+    text-align: center;
+    
+}
+
+.nav-overlay-content .close-btn {
+    position: fixed; 
+    top: 10px; 
+    right: 20px; 
+    font-size: 3em;
+    cursor: pointer;
+    color: white;
+    z-index: 11; 
+    visibility: hidden; 
+}
+
+.nav-overlay .custom-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-overlay .custom-navbar-left,
+.nav-overlay .custom-navbar-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.nav-overlay .custom-navbar-left {
+    border-right: 3px solid white;
+    padding-right: 20px;
+    align-items: flex-end;
+}
+
+.nav-overlay .custom-navbar-right {
+    padding-left: 40px; 
+    align-items: flex-start;
+}
+
+.nav-overlay .custom-navbar a {
+    font-size: 2em;
+    margin: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-overlay .custom-navbar a:hover {
+    color: #ff0000;
+}
+
+.nav-overlay .custom-navbar i {
+    margin-right: 10px;
 }
 
 .logo2 img {
@@ -75,14 +160,14 @@ body {
     justify-content: flex-start; 
     align-items: center;
     text-align: center;
-    margin-top: 50px; 
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 50px; 
     z-index: 5;
     position: relative;
 }
 
 .contact-section {
-    padding: 20px 0; 
+    padding: 20px 0;
     width: 100%;
     z-index: 5; 
     position: relative; 
@@ -146,5 +231,49 @@ body {
     .contact-form .form-control {
         width: 100%; 
     }
+
+    .nav-overlay-content {
+        top: 15%; 
+    }
+
+    .nav-overlay .custom-navbar {
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center;
+        width: 90%; 
+        margin: 0 auto; 
+    }
+
+    .nav-overlay .custom-navbar-left,
+    .nav-overlay .custom-navbar-right {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .nav-overlay .custom-navbar-left {
+        border-right: 3px solid white;
+        padding-right: 20px;
+        align-items: flex-end; 
+        margin-right: 0; 
+    }
+
+    .nav-overlay .custom-navbar-right {
+        padding-left: 0; 
+        align-items: flex-start; 
+        margin-left: 20px; 
+    }
+
+    .nav-overlay .custom-navbar a {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    .nav-overlay .custom-navbar i {
+        font-size: 2em; 
+        margin: 10px 0;
+    }
 }
+
+
 
