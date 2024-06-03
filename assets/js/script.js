@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Arrow Navigation for Features
     const leftArrow = document.getElementById('left-arrow');
     const rightArrow = document.getElementById('right-arrow');
     const featuresContainer = document.getElementById('features-container');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Email Form Submission
     const emailForm = document.getElementById('emailForm');
     if (emailForm) {
         emailForm.addEventListener('submit', function(event) {
@@ -30,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // VIP Booking Form Submission
     const vipBookingForm = document.getElementById('vipBookingForm');
     if (vipBookingForm) {
         vipBookingForm.addEventListener('submit', function(event) {
@@ -43,5 +46,42 @@ document.addEventListener('DOMContentLoaded', function() {
             // Here you would typically send the data to a server
         });
     }
+
+    // Burger Menu and Overlay
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    const closeBtn = document.querySelector('.nav-overlay .close-btn');
+
+    if (burgerMenu && navOverlay && closeBtn) {
+        burgerMenu.addEventListener('click', function() {
+            navOverlay.style.height = '100%';
+            closeBtn.style.visibility = 'visible'; // Make close button visible when overlay is shown
+        });
+
+        closeBtn.addEventListener('click', function() {
+            navOverlay.style.height = '0';
+            closeBtn.style.visibility = 'hidden'; // Hide close button when overlay is hidden
+        });
+
+        // Optionally, close the overlay if the user clicks outside the content
+        navOverlay.addEventListener('click', function(event) {
+            if (event.target === navOverlay) {
+                navOverlay.style.height = '0';
+                closeBtn.style.visibility = 'hidden'; // Hide close button when overlay is hidden
+            }
+        });
+    }
+
+    // Hide burger menu on index page
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+        const burgerMenuElement = document.querySelector('.burger-menu');
+        if (burgerMenuElement) {
+            burgerMenuElement.style.display = 'none';
+        }
+    }
 });
+
+
+
+
 
