@@ -211,6 +211,13 @@ body {
     .custom-navbar a {
         font-size: 1.2em; 
     }
+    .custom-navbar {
+        position: relative;
+        bottom: 50px; /* Adjust this value to move the navbar higher */
+        
+        
+        padding: 0;
+    }
 
     .custom-navbar-left {
         border-right: 3px solid white;
